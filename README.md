@@ -17,7 +17,7 @@ from the Inverted Hexagonal to the Bilayer Structure_,
 Saeed Mortezazadeh, Yousef Jamali, Hossein Naderi-Manesh, and Alexander P.Lyubartsev, 
 (https://doi.org/10.1371/journal.pone.0214673)
 
-For using this program you need python 3 and the following prerequisite modules: 
+For using this code you need python 3 and the following prerequisite modules: 
 numpy, scipy, matplotlib, and mdtraj for parsing the ’dcd’ and ’xtc’ trajectory 
 file formats. For ease of use, you can append the path of scg4py code to PYHTONPATH
 in the .bashrc file.
