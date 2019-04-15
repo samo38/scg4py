@@ -1,0 +1,27 @@
+TOP = sample.CGtop
+Temp = 300
+Cutoff = 20
+cutoffSkin = 2
+maxNB = 100
+maxB = 60
+maxA = 10
+nEQsnaps = 1
+
+METHOD = IBI
+Iterate = 20
+CorFactor = 0.1
+Lambda = 0.8
+DPotSmooth = 1.0
+PressTarget = 1.0
+PressFactor = 0.0001
+CorNB = yes
+CorB = yes
+CorA = yes
+CorD = yes
+
+inPot = CGsystem.pot
+refHist = CGsystem.ref.hist
+output = ibi_1
+lastConf = no
+SaveTraj = yes
+SysName = lipid

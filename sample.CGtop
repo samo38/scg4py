@@ -1,0 +1,46 @@
+MOL =  PRP  PRPO  
+NMOL =  100  150  
+
+EXCL = 2
+
+########################################
+########################################
+
+MOL:PRP:BEAD = 3
+# BeadId  BeadName  BeadType  LmpType  BeadCharge   BeadMass
+    1        C1       CH3        1       0.000        15.035  
+    2        C2       CH2        2       0.000        14.027  
+    3        C3       CH3        1       0.000        15.035  
+
+MOL:PRP:BOND = 1
+# BondTypeId   BondName : bead1 bead2 [, ...]
+  1    CH3-CH2    :  1 2, 2 3
+
+MOL:PRP:ANGLE = 1
+# AngleTypeId   AngleName : bead1 bead2 bead3 [, ...]
+  1     CH3-CH2-CH3     :  1 2 3
+
+MOL:PRP:DIHEDRAL = 0
+
+########################################
+########################################
+
+MOL:PRPO:BEAD = 3
+# BeadId  BeadName  BeadType  LmpType  BeadCharge   BeadMass
+    1        C1       CH3        1       0.000        15.035  
+    2        C2       CH2        2       0.000        14.027  
+    3        C3       CHO        3       0.000        31.034  
+
+MOL:PRPO:BOND = 2
+# BondTypeId   BondName : bead1 bead2 [, ...]
+  1    CH3-CH2    :  1 2
+  2    CH2-CHO    :  2 3
+
+MOL:PRPO:ANGLE = 1
+# AngleTypeId   AngleName : bead1 bead2 bead3 [, ...]
+  2     CH3-CH2-CHO     :  1 2 3
+
+MOL:PRPO:DIHEDRAL = 0
+
+########################################
+########################################

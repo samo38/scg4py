@@ -1,0 +1,61 @@
+# pdb, gro, dcd, xtc, lammptrj are supported.
+AATRAJ = AA_traj.xtc         # atomistic trajcetory path
+CGTRAJ = CG_traj.lammpstrj   # CG trajcetory path
+MOL = PRP PRPO               # The names of all types of molecules in the system (Propane , 1-Propanol)
+NMOL = 100 150               # Number of each molecule type
+MOL:PRP:ATOM = 11            # Definition of the PRP molecule (propane)
+# AtomId   AtomName    AtomCharge   AtomMass
+    1         C1         -0.302      12.011
+    2         H11         0.068      1.0080
+    3         H12         0.068      1.0080
+    4         H13         0.068      1.0080
+    5         C2          0.270      12.011
+    6         H21        -0.037      1.0080
+    7         H22        -0.037      1.0080
+    8         C3         -0.302      12.011
+    9         H31         0.068      1.0080
+   10         H32         0.068      1.0080
+   11         H33         0.068      1.0080
+
+MOL:PRP:MAPPING = 3          # Definition of the CG mapping of the PRP molecule
+# BeadId  BeadName  BeadType : AtomIds
+    1       C1         CH3   :   1 2 3 4
+    2       C2         CH2   :   5 6 7
+    3       C3         CH3   :   8 9 10 11
+
+MOL:PRP:BOND = 1             # Definition of the bonds in the CG PRP molecule
+# BondTypeId  :  BeadId1 BeadId2 [, Beadid1 Beadid2 , ...]
+    1         :   1 2, 2 3
+
+MOL:PRP:ANGLE = yes          # if Yes, generates all types of angles in the molecule
+MOL:PRP:DIHEDRAL = yes       # if Yes, generates all types of dihedrals in the molecule
+#############################
+#############################
+MOL:PRPO:ATOM = 12            # Definition of the PRP molecule (propane)
+# AtomId   AtomName    AtomCharge   AtomMass
+    1         C1         -0.287      12.011
+    2         H11         0.071      1.0080
+    3         H12         0.071      1.0080
+    4         H13         0.071      1.0080
+    5         C2          0.075      12.011
+    6         H21         0.001      1.0080
+    7         H22         0.001      1.0080
+    8         C3          0.239      12.011
+    9         H31         0.015      1.0080
+   10         H32         0.015      1.0080
+   11         O          -0.688      15.9994
+   12         HO          0.416      1.0080
+
+MOL:PRPO:MAPPING = 3          # Definition of the CG mapping of the PRP molecule
+# BeadId  BeadName  BeadType : AtomIds
+    1       C1         CH3   :   1 2 3 4
+    2       C2         CH2   :   5 6 7
+    3       C3         CHO   :   8 9 10 11 12
+
+MOL:PRPO:BOND = 2             # Definition of the bonds in the CG PRP molecule
+# BondTypeId  :  BeadId1 BeadId2 [, Beadid1 Beadid2 , ...]
+    1         :   1 2         # This bond is similar to the bond CH3-CH2 in molecule PRP (line28). So the id is set to 1
+    2         :   2 3
+
+MOL:PRPO:ANGLE = yes          # if Yes, generates all types of angles in the molecule
+MOL:PRPO:DIHEDRAL = yes       # if Yes, generates all types of dihedrals in the molecule
