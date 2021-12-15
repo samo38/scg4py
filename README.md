@@ -3,7 +3,7 @@ Module name: scg4py (Systematic Coarse-Graining for Python)
 Author: Saeed Mortezazadeh
 
 Description:
-scg4py is written in python language to generate coarse-grained (CG) potentials 
+scg4py is a program written in python language to generate coarse-grained (CG) potentials 
 of the system of interest through systematic coarse-graining approach. This module 
 is a collection of tools to implement all coarse-graining steps including mapping 
 the atomistic trajectory to the CG trajectory, generating the CG topology file, 
