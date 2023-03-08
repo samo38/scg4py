@@ -1397,7 +1397,7 @@ class _cTRAJ:
         self._setNone()
 
     def rmPBC(self, MolId, BondsMap):
-        if self.Type is not 'LMP':
+        if self.Type != 'LMP':
             self.scaleSnap()
         else:
             if self.xs is not None and self.ys is not None and self.zs is not None:
